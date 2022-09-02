@@ -25,6 +25,15 @@ function crearProductos(){
 function agregarAlCarrito(producto){
     carrito.push(producto);
     console.log(carrito);
+
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: producto.nombre+ ' Agregado Correctamente',
+        showConfirmButton: false,
+        timer: 1500
+      });
+
     document.getElementById("items").innerHTML+=`
         <tr>
             <td>${producto.id}</td>
